@@ -1,0 +1,101 @@
+
+:root{--saffron:#FFB300;--cream:#fff6ec;--text:#3b2f1b}
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Devanagari',sans-serif;background:var(--cream);color:var(--text)}
+.header{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ff9933, #ffb84d, #ffd1b3);
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;}
+.header img{height: 85px;}
+.social-icons-header img{height: 35px;}
+.social-icons-footer img{height: 50px;padding: 2px 3px;position: sticky;}
+@font-face {
+  font-family: 'AmsVedant';
+  src: url('fonts/AmsVedant.ttf') format('truetype');
+}
+.shloka{font-family: 'AmsVedant', 'Mangal', 'Noto Sans Devanagari', sans-serif;
+    font-size: 25px;
+	font-weight: bold;
+    color: #002366;
+    text-align: center;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.8);
+    animation: sparkle 3s infinite ease-in-out;}
+	@keyframes sparkle {
+    0% {opacity: 1; text-shadow: 0px 0px 6px #fff;}
+    50% {opacity: 0.7; text-shadow: 0px 0px 12px #ffd;}
+    100% {opacity: 1; text-shadow: 0px 0px 6px #fff;}
+}
+.menu-bar {
+    background: #f03e00;
+    padding: 8px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    display: flex;
+    padding: 3px 6px;
+    background: ff6f40;
+    border-radius: 10px;
+    font-size: 14px;
+	font-weight: bold;
+    color: #002366;
+    transition: 0.3s;
+}
+
+.menu-bar li img {
+    height: 30px;
+}
+
+.menu-bar li:hover {
+    background: #ffd9b3;
+    transform: scale(1.06);
+    box-shadow: 0 1px 3px rgba(255,153,51,0.6);
+}
+.banner-wrapper{width:100%;overflow:hidden;background:linear-gradient(to bottom,#fff0d6,#ffe6c0)}
+.banner-carousel{display:flex;width:400%;animation:slideBanner 12s infinite}
+.banner-slide{width:100%}
+.banner-slide img{width:100%;height:340px;object-fit:cover;border-bottom:3px solid #b54b32}
+@keyframes slideBanner{0%{transform:translateX(0%)}20%{transform:translateX(0%)}25%{transform:translateX(-100%)}45%{transform:translateX(-100%)}50%{transform:translateX(-200%)}70%{transform:translateX(-200%)}75%{transform:translateX(-300%)}100%{transform:translateX(-300%)}}
+.marquee{background:#6b0f0f;padding:10px;color:#ffe6c6;font-weight:700}
+.smooth-marquee {
+	font-family: 'Tiro Devanagari Marathi', 'AmsVedant', 'Mangal', serif;
+    background: linear-gradient(180deg,#f8e4c2,#f1d9a3,#e8c37a);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    border-top: 2px solid #ffcc80;
+    border-bottom: 2px solid #ffcc80;
+}
+.section{padding:18px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:#fff;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center}
+.card img{width:100px;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+.btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:8px;background:var(--saffron);color:#fff;text-decoration:none;font-weight:700}
+.footer{margin-top:18px;padding:18px;background:var(--saffron);color:#fff;text-align:center}
+.ss-footer{background:linear-gradient(180deg,#f8e4c2,#f1d9a3,#e8c37a);padding:40px 20px;color:#4a1f0a;font-family:Arial;border-top:4px solid #b8742a}
+.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-bottom:30px}
+.footer-logo{width:120px;margin-bottom:10px}
+.footer-mantra{font-size:1.1rem;font-family:'SamarkanLocal',serif;color:#7d150f;text-shadow:2px 2px 4px rgba(94,18,8,0.4)}
+.footer-col h3{font-size:1.1rem;margin-bottom:10px;color:#7d150f;border-bottom:2px solid #c57b2a;display:inline-block;padding-bottom:4px}
+.footer-col ul{list-style:none;padding:0}
+.footer-col ul li{margin:6px 0}
+.footer-col ul li a{color:#4a1f0a;text-decoration:none}
+.footer-bottom{text-align:center;padding-top:15px;border-top:1px solid #c99e5a}
+.whatsapp-btn{position:fixed;bottom:25px;right:25px;background:#25D366;padding:14px;border-radius:50%;cursor:pointer;box-shadow:0 0 10px #0006;z-index:9999}
+.whatsapp-btn img{width:36px}
+.popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:10000}
+.popup-content{background:#fff8e8;padding:25px;width:320px;margin:80px auto;border-radius:12px;position:relative;box-shadow:0 0 15px #0004}
+.popup-content input,.popup-content textarea,.popup-content select{width:100%;padding:8px;margin-bottom:10px;border-radius:6px;border:1px solid #e0c6b0}
+.popup-content button{width:100%;padding:10px;background:#25D366;border:none;color:#fff;border-radius:6px;font-weight:700}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}.banner-slide img{height:420px}.marquee{margin-top:8px}}
